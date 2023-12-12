@@ -37,6 +37,14 @@ public:
     {
         return name_;
     }
+    virtual std::shared_ptr<GameObject> new_game_object(const std::string& name)
+    {
+        std::shared_ptr<GameObject> game_object = std::make_shared<GameObject>();
+        game_object->set_name(name);
+        game_object->add_component<Transform>();
+        add_game_object(game_object);
+        return game_object;
+    }
 
     // ゲームオブジェクトを追加する関数
     virtual void add_game_object(const std::shared_ptr<GameObject>& game_object)

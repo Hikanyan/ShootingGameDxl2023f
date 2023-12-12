@@ -5,48 +5,54 @@
 
 void SampleScene::init()
 {
-	add_game_object(obj_); //オブジェクトを追加
-	obj_->set_name("obj"); //名前を設定
-	obj_->add_component<Transform>(); //コンポーネントを追加
+	// 新しいGameObjectインスタンスを作成し、初期設定を行う
+	obj_ = new_game_object("obj");
+	// その他のオブジェクト固有の設定
 	obj_->get_transform().set_position(tnl::Vector3(100, 100, 0));
 	obj_->get_transform().set_scale(tnl::Vector3(100, 100, 0));
-	obj_->add_component<Test>();
+	obj_->add_component<Test>(); // 追加のコンポーネント設定
+
+	obj_1 = new_game_object("obj_1");
+	obj_1->get_transform().set_position(tnl::Vector3(200, 200, 0));
+	obj_1->get_transform().set_scale(tnl::Vector3(100, 100, 0));
+	obj_1->add_component<Test>();
+
+	SceneBase::init();
+	// 初期化ログを出力
 	Debug::log("init{}", obj_->get_name());
 }
 
 void SampleScene::awake()
 {
-	obj_->awake();
+	SceneBase::awake();
 }
 
 void SampleScene::start()
 {
-	obj_->start();
+	SceneBase::start();
 }
 
 void SampleScene::update(float delta_time)
 {
-	obj_->update(delta_time);
+	SceneBase::update(delta_time);
 }
 
 void SampleScene::fixed_update(float delta_time)
 {
-	obj_->fixed_update(delta_time);
+	SceneBase::fixed_update(delta_time);
 }
 
 void SampleScene::draw()
 {
-	obj_->draw();
+	SceneBase::draw();
 }
 
 void SampleScene::on_enable()
 {
-	obj_->on_enable();
-	Debug::log("update{}", obj_->get_name());
+	SceneBase::on_enable();
 }
 
 void SampleScene::on_disable()
 {
-	obj_->on_disable();
-	Debug::log("update{}", obj_->get_name());
+	SceneBase::on_disable();
 }

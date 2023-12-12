@@ -22,4 +22,6 @@ private:
 
     //落ちることがあるので、スマートポインタを使う
     std::shared_ptr<GameObject> obj_ = std::make_shared<GameObject>(); //動的にメモリを確保
+    std::shared_ptr<GameObject> obj_1 = std::make_shared<GameObject>(); //動的にメモリを確保
+    
 };
