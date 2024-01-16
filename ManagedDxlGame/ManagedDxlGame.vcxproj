@@ -186,6 +186,11 @@
     <ClCompile Include="program\dxlib_ext\mesh\dxlib_ext_mesh_mtrl_gui_controller.cpp" />
     <ClCompile Include="program\dxlib_ext\OBJLoader.cpp" />
     <ClCompile Include="program\game\gm_main.cpp" />
+    <ClCompile Include="program\game\hikanyan_laboratory\entity\Attack.cpp" />
+    <ClCompile Include="program\game\hikanyan_laboratory\entity\Health.cpp" />
+    <ClCompile Include="program\game\hikanyan_laboratory\entity\player\IPlayerController.cpp" />
+    <ClCompile Include="program\game\hikanyan_laboratory\entity\player\Player.cpp" />
+    <ClCompile Include="program\game\hikanyan_laboratory\entity\player\PlayerMove.cpp" />
     <ClCompile Include="program\game\hikanyan_laboratory\Scene\TitleScene.cpp" />
     <ClCompile Include="program\game\hikanyan_laboratory\userInterface\InputManager.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\Behaviour.cpp" />
@@ -270,6 +275,11 @@
     <ClInclude Include="program\dxlib_ext\mesh\dxlib_ext_mesh_mtrl_gui_controller.h" />
     <ClInclude Include="program\dxlib_ext\OBJLoader.h" />
     <ClInclude Include="program\game\gm_main.h" />
+    <ClInclude Include="program\game\hikanyan_laboratory\entity\Attack.h" />
+    <ClInclude Include="program\game\hikanyan_laboratory\entity\Health.h" />
+    <ClInclude Include="program\game\hikanyan_laboratory\entity\player\IPlayerController.h" />
+    <ClInclude Include="program\game\hikanyan_laboratory\entity\player\Player.h" />
+    <ClInclude Include="program\game\hikanyan_laboratory\entity\player\PlayerMove.h" />
     <ClInclude Include="program\game\hikanyan_laboratory\Scene\TitleScene.h" />
     <ClInclude Include="program\game\hikanyan_laboratory\userInterface\InputManager.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\Behaviour.h" />
@@ -308,9 +318,6 @@
     <ClInclude Include="program\library\tnl_util.h" />
     <ClInclude Include="program\library\tnl_vector2i.h" />
     <ClInclude Include="program\library\tnl_vector3.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="program\game\hikanyan_laboratory\entity\" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
