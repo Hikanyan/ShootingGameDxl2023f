@@ -176,10 +176,12 @@
     <ClCompile Include="program\dxlib_ext\OBJLoader.cpp" />
     <ClCompile Include="program\game\gm_main.cpp" />
     <ClCompile Include="program\game\hikanyan_laboratory\Scene\TitleScene.cpp" />
+    <ClCompile Include="program\game\hikanyan_laboratory\userInterface\InputManager.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\Behaviour.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\component\BoxCollider2D.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\component\Component.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\component\Rigidbody2D.cpp" />
+    <ClCompile Include="program\hikanyan_library\include\mono_behaviour\component\Text.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\component\Transform.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\Debug.cpp" />
     <ClCompile Include="program\hikanyan_library\include\mono_behaviour\GameObject.cpp" />
@@ -243,10 +245,12 @@
     <ClInclude Include="program\dxlib_ext\OBJLoader.h" />
     <ClInclude Include="program\game\gm_main.h" />
     <ClInclude Include="program\game\hikanyan_laboratory\Scene\TitleScene.h" />
+    <ClInclude Include="program\game\hikanyan_laboratory\userInterface\InputManager.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\Behaviour.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\component\BoxCollider2D.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\component\Component.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\component\Rigidbody2D.h" />
+    <ClInclude Include="program\hikanyan_library\include\mono_behaviour\component\Text.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\component\Transform.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\Debug.h" />
     <ClInclude Include="program\hikanyan_library\include\mono_behaviour\GameObject.h" />

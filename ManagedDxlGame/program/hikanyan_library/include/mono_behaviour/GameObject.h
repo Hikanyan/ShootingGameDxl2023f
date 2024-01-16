@@ -79,11 +79,11 @@ public:
             throw std::logic_error("Component already exists");
         }
         auto newComponent = std::make_shared<T>(std::forward<Args>(args)...);
-        T* componentPtr = newComponent.get();
+        T* component_ptr = newComponent.get();
         components_[type_index] = std::move(newComponent);
         //set_ownerをする
-        componentPtr->set_owner(this);
-        return componentPtr;
+        component_ptr->set_owner(this);
+        return component_ptr;
     }
 
     // コンポーネントを削除する

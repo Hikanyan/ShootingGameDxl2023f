@@ -24,61 +24,61 @@
 #include "dxlib_ext_gui_menu_selector.h"
 #include "dxlib_ext_shadow_map.h"
 
-// ƒEƒBƒ“ƒhƒE‚Ì•
+// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®å¹…
 const int DXE_WINDOW_WIDTH = 1280;
-// ƒEƒBƒ“ƒhƒE‚Ì‚‚³
+// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®é«˜ã•
 const int DXE_WINDOW_HEIGHT = 720;
-// ŒÅ’èƒtƒŒ[ƒ€ƒŒ[ƒg
+// å›ºå®šãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆ
 const float DXE_FIX_FPS = 60.0f;
 
-// •¶š•`‰æ
+// æ–‡å­—æç”»
 void DrawStringEx(float x, float y, int color, const char* _str, ...);
 void DrawStringEx(int x, int y, int color, const char* _str, ...);
 void DrawStringToHandleEx(const float x, const float y, const int color, const int hdl, const char* _str, ...);
 
-// ƒ‰ƒCƒ“•`‰æ
+// ãƒ©ã‚¤ãƒ³æç”»
 void DrawLineEx(const tnl::Vector3& p, const tnl::Vector3& v, const float length, const int color = -1);
-// ‹éŒ`•`‰æ
+// çŸ©å½¢æç”»
 void DrawBoxEx(const tnl::Vector3& p, const float width, const float height, const bool fill = true, const int color = -1);
 void DrawRotaBox(const tnl::Vector3& pos, float w, float h, float rad, int color = -1);
 
 
-// FPS ƒCƒ“ƒWƒP[ƒ^•`‰æ
+// FPS ã‚¤ãƒ³ã‚¸ã‚±ãƒ¼ã‚¿æç”»
 void DrawFpsIndicator(const tnl::Vector3& pos, float delta_time);
 
 
 //------------------------------------------------------------------------------------------------------------
-// ³˜ZŠpŒ`‚ğ•`‰æ
-// arg1... ³˜ZŠp‚Ì’†SÀ•W
-// arg2... ³˜ZŠp‚Ì•
-// arg3... F ( 16i”w’è 0xffffffff ‚Å”’ )
+// æ­£å…­è§’å½¢ã‚’æç”»
+// arg1... æ­£å…­è§’ã®ä¸­å¿ƒåº§æ¨™
+// arg2... æ­£å…­è§’ã®å¹…
+// arg3... è‰² ( 16é€²æ•°æŒ‡å®š 0xffffffff ã§ç™½ )
 void DrawHexagon(const tnl::Vector3 pos, float width, int color = -1);
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-// ƒfƒoƒbƒO—p‚ÌƒOƒŠƒbƒh’n–Ê
-// arg1... ƒJƒƒ‰
-// arg2... ƒOƒŠƒbƒhƒ}ƒX‚ÌƒTƒCƒY
-// arg3... ƒOƒŠƒbƒh‚ğ•À‚×‚éŒÂ” ( ‹ô”ŒÂ‚Åw’è )
-// arg4... 16i”ƒJƒ‰[
-// tips... ‚±‚ÌŠÖ”‚ğg—p‚·‚é‘O‚ÉƒJƒƒ‰‚ğ¶¬‚µ‚Ä update ŠÖ”‚ğÀs‚µ‚Ä‚­‚¾‚³‚¢
+// ãƒ‡ãƒãƒƒã‚°ç”¨ã®ã‚°ãƒªãƒƒãƒ‰åœ°é¢
+// arg1... ã‚«ãƒ¡ãƒ©
+// arg2... ã‚°ãƒªãƒƒãƒ‰ãƒã‚¹ã®ã‚µã‚¤ã‚º
+// arg3... ã‚°ãƒªãƒƒãƒ‰ã‚’ä¸¦ã¹ã‚‹å€‹æ•° ( å¶æ•°å€‹ã§æŒ‡å®š )
+// arg4... 16é€²æ•°ã‚«ãƒ©ãƒ¼
+// tips... ã“ã®é–¢æ•°ã‚’ä½¿ç”¨ã™ã‚‹å‰ã«ã‚«ãƒ¡ãƒ©ã‚’ç”Ÿæˆã—ã¦ update é–¢æ•°ã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„
 void DrawGridGround( const Shared<dxe::Camera> camera, const float square_size, int row_num, int color = 0x99999999 );
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-// ³˜ZŠpŒ`‚ğ•~‚«‹l‚ß‚½’n–Ê‚ğ•`‰æ
-// arg1... ƒJƒƒ‰
-// arg2... ³˜ZŠpŒ`‚Ì•
-// arg3... c‰¡‚É‰½ŒÂ•À‚×‚é‚©
-// arg4... XYZ ²‚ğ•`‰æ‚·‚é‚©
-// arg5... F
-// tips... ‚±‚ÌŠÖ”‚ğg—p‚·‚é‘O‚ÉƒJƒƒ‰‚ğ¶¬‚µ‚Ä update ŠÖ”‚ğÀs‚µ‚Ä‚­‚¾‚³‚¢
-// tips... Œy‚¢ˆ—‚Å‚Í‚È‚¢‚Ì‚ÅƒfƒoƒbƒO—p“r‚É‚µ‚Ä‚­‚¾‚³‚¢
+// æ­£å…­è§’å½¢ã‚’æ•·ãè©°ã‚ãŸåœ°é¢ã‚’æç”»
+// arg1... ã‚«ãƒ¡ãƒ©
+// arg2... æ­£å…­è§’å½¢ã®å¹…
+// arg3... ç¸¦æ¨ªã«ä½•å€‹ä¸¦ã¹ã‚‹ã‹
+// arg4... XYZ è»¸ã‚’æç”»ã™ã‚‹ã‹
+// arg5... è‰²
+// tips... ã“ã®é–¢æ•°ã‚’ä½¿ç”¨ã™ã‚‹å‰ã«ã‚«ãƒ¡ãƒ©ã‚’ç”Ÿæˆã—ã¦ update é–¢æ•°ã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„
+// tips... è»½ã„å‡¦ç†ã§ã¯ãªã„ã®ã§ãƒ‡ãƒãƒƒã‚°ç”¨é€”ã«ã—ã¦ãã ã•ã„
 void DrawHexagonGround(const Shared<dxe::Camera> camera, const float hex_width, int row_num, bool is_draw_center_line = true, int color = 0x99999999);
 
-// ƒfƒtƒHƒ‹ƒgƒ‰ƒCƒgƒpƒ‰ƒ[ƒ^‚ğƒŠƒ\[ƒX‚©‚çİ’è
-// arg1... DrawDefaultLightGuiController ‚Åo—Í‚µ‚½ƒoƒCƒiƒŠƒtƒ@ƒCƒ‹ƒpƒX
+// ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ©ã‚¤ãƒˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ãƒªã‚½ãƒ¼ã‚¹ã‹ã‚‰è¨­å®š
+// arg1... DrawDefaultLightGuiController ã§å‡ºåŠ›ã—ãŸãƒã‚¤ãƒŠãƒªãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
 void SetDefaultLightParameter(const std::string& file_path);
 
-// ƒfƒtƒHƒ‹ƒgƒ‰ƒCƒgƒpƒ‰ƒ[ƒ^‚ğƒRƒ“ƒgƒ[ƒ‹‚·‚éGUI‚ğ•`‰æ
+// ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ©ã‚¤ãƒˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã™ã‚‹GUIã‚’æç”»
 void DrawDefaultLightGuiController();
 
 

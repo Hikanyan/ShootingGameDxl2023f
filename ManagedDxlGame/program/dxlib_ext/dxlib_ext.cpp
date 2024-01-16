@@ -139,25 +139,25 @@ void DrawRotaBox(const tnl::Vector3& pos, float w, float h, float rad, int color
 //------------------------------------------------------------------------------------------------------------------------------
 void DrawHexagon(const tnl::Vector3 pos, float width, int color ) {
 
-	// ³˜ZŠpŒ`‚Éû‚Ü‚é‰~‚Ì”¼Œa
+	// æ­£å…­è§’å½¢ã«åã¾ã‚‹å††ã®åŠå¾„
 	float radius = width / 2;
-	// ‰~‚ğˆÍ‚¤³˜ZŠpŒ`‚Ì•Ó‚Ì’·‚³
+	// å††ã‚’å›²ã†æ­£å…­è§’å½¢ã®è¾ºã®é•·ã•
 	float edge = radius / sqrt(3.0f) * 2.0f;
-	// ³˜ZŠpŒ`‚Ì’†S‚©‚ç‚Ì‚‚³
+	// æ­£å…­è§’å½¢ã®ä¸­å¿ƒã‹ã‚‰ã®é«˜ã•
 	float height = tnl::Vector3(-radius, edge * 0.5f, 0).length();
 
 	tnl::Vector3 vertex[6];
-	// ‚UŠpŒ`‚Ì¶ã
+	// ï¼–è§’å½¢ã®å·¦ä¸Š
 	vertex[0] = pos + tnl::Vector3(-radius, edge * 0.5f, 0);
-	// ‚UŠpŒ`‚Ìã
+	// ï¼–è§’å½¢ã®ä¸Š
 	vertex[1] = pos + tnl::Vector3(0, height, 0);
-	// ‚UŠpŒ`‚Ì‰Eã
+	// ï¼–è§’å½¢ã®å³ä¸Š
 	vertex[2] = pos + tnl::Vector3(radius, edge * 0.5f, 0);
-	// ‚UŠpŒ`‚Ì‰E‰º
+	// ï¼–è§’å½¢ã®å³ä¸‹
 	vertex[3] = pos + tnl::Vector3(radius, -edge * 0.5f, 0);
-	// ‚UŠpŒ`‚Ì‰º
+	// ï¼–è§’å½¢ã®ä¸‹
 	vertex[4] = pos + tnl::Vector3(0, -height, 0);
-	// ‚UŠpŒ`‚Ì¶‰º
+	// ï¼–è§’å½¢ã®å·¦ä¸‹
 	vertex[5] = pos + tnl::Vector3(-radius, -edge * 0.5f, 0);
 
 	//DrawCircle(pos.x, pos.y, radius, 0xffff00ff, false);
@@ -251,7 +251,7 @@ void DrawHexagonGround(const Shared<dxe::Camera> camera, const float hex_width, 
 
 			float px = s.x + (k * radius * 2.0f);
 			float pz = s.z - (i * height * 1.5f);
-			// ‹ô”’i‚Í‰E‚É‚¸‚ç‚µ‚Ä•`‰æ
+			// å¶æ•°æ®µã¯å³ã«ãšã‚‰ã—ã¦æç”»
 			px += (i % 2) * radius;
 
 			tnl::Vector3 n = { px, 0, pz };
@@ -280,7 +280,7 @@ void DrawAxis(const Shared<dxe::Camera> camera, const tnl::Vector3& pos, const t
 	SetCameraViewMatrix(view);
 	SetupCamera_ProjectionMatrix(proj);
 
-	// ƒIƒuƒWƒFƒNƒg‚Ìƒ[ƒ‹ƒhs—ñ‚Ìì¬
+	// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ¯ãƒ¼ãƒ«ãƒ‰è¡Œåˆ—ã®ä½œæˆ
 	tnl::Matrix mt_trans;
 	tnl::Matrix mt_rot;
 	tnl::Matrix mt_obj_world;
@@ -310,7 +310,7 @@ void DrawOBB(const Shared<dxe::Camera> camera, const tnl::Vector3& pos, const tn
 	SetCameraViewMatrix(view);
 	SetupCamera_ProjectionMatrix(proj);
 
-	// ƒIƒuƒWƒFƒNƒg‚Ìƒ[ƒ‹ƒhs—ñ‚Ìì¬
+	// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ¯ãƒ¼ãƒ«ãƒ‰è¡Œåˆ—ã®ä½œæˆ
 	tnl::Matrix mt_trans;
 	tnl::Matrix mt_rot;
 	tnl::Matrix mt_obj_world;
@@ -347,7 +347,7 @@ void DrawAABB(const Shared<dxe::Camera> camera, const tnl::Vector3& pos, const t
 	SetCameraViewMatrix(view);
 	SetupCamera_ProjectionMatrix(proj);
 
-	// ƒIƒuƒWƒFƒNƒg‚Ìƒ[ƒ‹ƒhs—ñ‚Ìì¬
+	// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ¯ãƒ¼ãƒ«ãƒ‰è¡Œåˆ—ã®ä½œæˆ
 	tnl::Matrix mt_trans;
 	tnl::Matrix mt_obj_world;
 	mt_trans = tnl::Matrix::Translation(pos.x, pos.y, pos.z);
@@ -382,7 +382,7 @@ void DrawBdSphere(const Shared<dxe::Camera> camera, const tnl::Vector3& pos, con
 	SetCameraViewMatrix(view);
 	SetupCamera_ProjectionMatrix(proj);
 
-	// ƒIƒuƒWƒFƒNƒg‚Ìƒ[ƒ‹ƒhs—ñ‚Ìì¬
+	// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ¯ãƒ¼ãƒ«ãƒ‰è¡Œåˆ—ã®ä½œæˆ
 	tnl::Matrix mt_trans;
 	tnl::Matrix mt_rot;
 	tnl::Matrix mt_obj_world;
@@ -400,7 +400,7 @@ void DrawBdSphere(const Shared<dxe::Camera> camera, const tnl::Vector3& pos, con
 	tnl::Vector3 vy[ring_vtx_num];
 	tnl::Vector3 vz[ring_vtx_num];
 
-	// X²ƒŠƒ“ƒO
+	// Xè»¸ãƒªãƒ³ã‚°
 	for (int i = 0; i < ring_vtx_num; ++i) {
 		vx[i].x = 0;
 		vx[i].y = cos(tnl::ToRadian(360.0f / ring_vtx_num) * i) * radius;
@@ -414,7 +414,7 @@ void DrawBdSphere(const Shared<dxe::Camera> camera, const tnl::Vector3& pos, con
 		{ vx[e].x, vx[e].y, vx[e].z }, 0xffff0000);
 
 
-	// Y²ƒŠƒ“ƒO
+	// Yè»¸ãƒªãƒ³ã‚°
 	for (int i = 0; i < ring_vtx_num; ++i) {
 		vy[i].x = sin(tnl::ToRadian(360.0f / ring_vtx_num) * i) * radius;
 		vy[i].y = 0;
@@ -427,7 +427,7 @@ void DrawBdSphere(const Shared<dxe::Camera> camera, const tnl::Vector3& pos, con
 	DrawLine3D({ vy[s].x, vy[s].y, vy[s].z },
 		{ vy[e].x, vy[e].y, vy[e].z }, 0xff00ff00);
 
-	// Z²ƒŠƒ“ƒO
+	// Zè»¸ãƒªãƒ³ã‚°
 	for (int i = 0; i < ring_vtx_num; ++i) {
 		vz[i].x = sin(tnl::ToRadian(360.0f / ring_vtx_num) * i) * radius;
 		vz[i].y = cos(tnl::ToRadian(360.0f / ring_vtx_num) * i) * radius;

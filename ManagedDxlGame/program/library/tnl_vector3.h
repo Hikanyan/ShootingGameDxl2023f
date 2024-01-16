@@ -108,43 +108,43 @@ namespace tnl {
 		static Vector3 ConvertToScreen(const Vector3& v, const float screen_w, const float screen_h, const Matrix& view, const Matrix& proj) noexcept;
 		static Vector3 Random( const float min_x, const float max_x, const float min_y, const float max_y, const float min_z, const float max_z ) noexcept;
 
-		// “™ŠÔŠu‚È’l‚Ì•âŠÔ
-		// arg1... n’l
-		// arg2... I’l
-		// arg3... •âŠÔ•âŠÔŠ®—¹‚Ü‚Å‚ÌŠÔ
-		// arg4... Œo‰ßŠÔ
-		// ret.... •âŠÔ’l
+		// ç­‰é–“éš”ãªå€¤ã®è£œé–“
+		// arg1... å§‹å€¤
+		// arg2... çµ‚å€¤
+		// arg3... è£œé–“è£œé–“å®Œäº†ã¾ã§ã®æ™‚é–“
+		// arg4... çµŒéæ™‚é–“
+		// ret.... è£œé–“å€¤
 		static Vector3 UniformLerp(const Vector3& s, const Vector3& e, float time_limit, float ct) noexcept ;
 
-		// sin ”g -90 ~ +90“x‚Ü‚Å‚ğ—˜—p‚µ‚½’l‚Ì•âŠÔ
-		// arg1... n’l
-		// arg2... I’l
-		// arg3... •âŠÔŠ®—¹‚Ü‚Å‚ÌŠÔ
-		// arg4... Œo‰ßŠÔ
-		// arg5... “à•”‚ÅŠÔ‚É‘Î‚·‚é•âŠÔ‚ğs‚¤‰ñ” ( ƒfƒtƒHƒ‹ƒg‚Í0‰ñ Å‘å5‰ñ )
-		// ret.... •âŠÔ’l
-		// tips... ’Êí‚Ì sin ”g‚É‚æ‚é•âŠÔ‚Å‚ÍŠÔŠu‚ª‚â‚â’P’²‚¾‚Æv‚¤ê‡
-		// ....... arg5 ‚Ìˆø”‚Å•âŠÔ‚ÌŠÔŠu‚ğL‚°A‚æ‚èƒGƒbƒW‚ÌŒø‚¢‚½•âŠÔ‚ğs‚¤‚±‚Æ‚ª‚Å‚«‚Ü‚·
+		// sin æ³¢ -90 ~ +90åº¦ã¾ã§ã‚’åˆ©ç”¨ã—ãŸå€¤ã®è£œé–“
+		// arg1... å§‹å€¤
+		// arg2... çµ‚å€¤
+		// arg3... è£œé–“å®Œäº†ã¾ã§ã®æ™‚é–“
+		// arg4... çµŒéæ™‚é–“
+		// arg5... å†…éƒ¨ã§æ™‚é–“ã«å¯¾ã™ã‚‹è£œé–“ã‚’è¡Œã†å›æ•° ( ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯0å› æœ€å¤§5å› )
+		// ret.... è£œé–“å€¤
+		// tips... é€šå¸¸ã® sin æ³¢ã«ã‚ˆã‚‹è£œé–“ã§ã¯é–“éš”ãŒã‚„ã‚„å˜èª¿ã ã¨æ€ã†å ´åˆ
+		// ....... arg5 ã®å¼•æ•°ã§è£œé–“ã®é–“éš”ã‚’åºƒã’ã€ã‚ˆã‚Šã‚¨ãƒƒã‚¸ã®åŠ¹ã„ãŸè£œé–“ã‚’è¡Œã†ã“ã¨ãŒã§ãã¾ã™
 		static Vector3 SmoothLerp(const Vector3& s, const Vector3& e, float time_limit, float ct, int strength = 0) noexcept;
 
-		// “™‰Á‘¬’¼ü‰^“®‚ğ—˜—p‚µ‚½’l‚Ì•âŠÔ
-		// arg1... n’l
-		// arg2... I’l
-		// arg3... •âŠÔŠ®—¹‚Ü‚Å‚ÌŠÔ
-		// arg4... Œo‰ßŠÔ
-		// arg5... “à•”‚ÅŠÔ‚É‘Î‚·‚é•âŠÔ‚ğs‚¤‰ñ” ( ƒfƒtƒHƒ‹ƒg‚Í0‰ñ Å‘å5‰ñ )
-		// ret.... •âŠÔ’l
-		// tips... ’Êí‚Ì “™‰Á‘¬“x‚É‚æ‚é•âŠÔ‚Å‚ÍŠÔŠu‚ª‚â‚â’P’²‚¾‚Æv‚¤ê‡
-		// ....... arg5 ‚Ìˆø”‚Åw”ŠÖ”“I‚É‘¬“x‚ªã‚ª‚é‚æ‚¤’²®‚Å‚«‚Ü‚·
+		// ç­‰åŠ é€Ÿç›´ç·šé‹å‹•ã‚’åˆ©ç”¨ã—ãŸå€¤ã®è£œé–“
+		// arg1... å§‹å€¤
+		// arg2... çµ‚å€¤
+		// arg3... è£œé–“å®Œäº†ã¾ã§ã®æ™‚é–“
+		// arg4... çµŒéæ™‚é–“
+		// arg5... å†…éƒ¨ã§æ™‚é–“ã«å¯¾ã™ã‚‹è£œé–“ã‚’è¡Œã†å›æ•° ( ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯0å› æœ€å¤§5å› )
+		// ret.... è£œé–“å€¤
+		// tips... é€šå¸¸ã® ç­‰åŠ é€Ÿåº¦ã«ã‚ˆã‚‹è£œé–“ã§ã¯é–“éš”ãŒã‚„ã‚„å˜èª¿ã ã¨æ€ã†å ´åˆ
+		// ....... arg5 ã®å¼•æ•°ã§æŒ‡æ•°é–¢æ•°çš„ã«é€Ÿåº¦ãŒä¸ŠãŒã‚‹ã‚ˆã†èª¿æ•´ã§ãã¾ã™
 		static Vector3 AccelLerp(const Vector3& s, const Vector3& e, float time_limit, float ct, int strength = 0) noexcept ;
 
 
-		// “™Œ¸‘¬’¼ü‰^“®‚ğ—˜—p‚µ‚½’l‚Ì•âŠÔ
-		// arg1... n’l
-		// arg2... I’l
-		// arg3... •âŠÔŠ®—¹‚Ü‚Å‚ÌŠÔ
-		// arg4... Œo‰ßŠÔ
-		// ret.... •âŠÔ’l
+		// ç­‰æ¸›é€Ÿç›´ç·šé‹å‹•ã‚’åˆ©ç”¨ã—ãŸå€¤ã®è£œé–“
+		// arg1... å§‹å€¤
+		// arg2... çµ‚å€¤
+		// arg3... è£œé–“å®Œäº†ã¾ã§ã®æ™‚é–“
+		// arg4... çµŒéæ™‚é–“
+		// ret.... è£œé–“å€¤
 		static Vector3 DecelLerp(const Vector3& s, const Vector3& e, float time_limit, float ct) noexcept ;
 
 

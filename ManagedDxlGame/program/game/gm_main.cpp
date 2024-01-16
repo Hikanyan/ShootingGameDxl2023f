@@ -6,7 +6,7 @@
 #include "gm_main.h"
 #include "../hikanyan_library/scene/SceneManager.h"
 #include "../hikanyan_library/scene/SampleScene.h"
-
+#include "hikanyan_laboratory/scene/TitleScene.h"
 //------------------------------------------------------------------------------------------------------------
 // ゲーム起動時に１度だけ実行されます
 void gameStart()
@@ -14,9 +14,10 @@ void gameStart()
     srand(time(0));
     SetBackgroundColor(32, 32, 32);
 
-    auto sampleScene = std::make_shared<SampleScene>();
-    SceneManager::getInstance()->add_scene("SampleScene", sampleScene);
-    SceneManager::getInstance()->load_scene("SampleScene");
+    auto sampleScene = std::make_shared<TitleScene>();
+    
+    SceneManager::getInstance()->add_scene("TitleScene", sampleScene);
+    SceneManager::getInstance()->load_scene("TitleScene");
     SceneManager::getInstance()->game_start();
 }
 

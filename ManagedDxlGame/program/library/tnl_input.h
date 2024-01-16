@@ -21,7 +21,7 @@ namespace tnl {
 		#define TNL_MOUSE_OUTPUT_RIGHT	(0x10)
 		#define TNL_MOUSE_OUTPUT_MIDDLE	(0x20)
 
-		// ƒ}ƒEƒX‘Î‰žƒL[ ˆê——
+		// ãƒžã‚¦ã‚¹å¯¾å¿œã‚­ãƒ¼ ä¸€è¦§
 		enum class eMouse {
 			LEFT,
 			RIGHT,
@@ -36,135 +36,135 @@ namespace tnl {
 			OUT_MIDDLE	= TNL_MOUSE_OUTPUT_MIDDLE
 		};
 
-		// ƒL[ƒ{[ƒh‘Î‰žƒL[ ˆê——
+		// ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰å¯¾å¿œã‚­ãƒ¼ ä¸€è¦§
 		enum class eKeys {
-			KB_BACK		// ƒoƒbƒNƒXƒy[ƒX
-			, KB_TAB		// ƒ^ƒu
-			, KB_RETURN	// ƒGƒ“ƒ^[
-			, KB_LSHIFT	// ¶ƒVƒtƒg
-			, KB_RSHIFT	// ‰EƒVƒtƒg
-			, KB_LCONTROL	// ¶ƒRƒ“ƒgƒ[ƒ‹
-			, KB_RCONTROL	// ‰EƒRƒ“ƒgƒ[ƒ‹
-			, KB_ESCAPE	// ƒGƒXƒP[ƒv
-			, KB_SPACE	    // ƒXƒy[ƒX
-			, KB_PGUP		// ‚o‚‚‡‚…‚t‚o
-			, KB_PGDN		// ‚o‚‚‡‚…‚c‚‚—‚Ž
-			, KB_END		// ƒGƒ“ƒh
-			, KB_HOME		// ƒz[ƒ€
-			, KB_LEFT		// ¶
-			, KB_UP		// ã
-			, KB_RIGHT	    // ‰E
-			, KB_DOWN		// ‰º
-			, KB_INSERT	// ƒCƒ“ƒT[ƒg
-			, KB_DELETE	// ƒfƒŠ[ƒg
+			KB_BACK		// ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹
+			, KB_TAB		// ã‚¿ãƒ–
+			, KB_RETURN	// ã‚¨ãƒ³ã‚¿ãƒ¼
+			, KB_LSHIFT	// å·¦ã‚·ãƒ•ãƒˆ
+			, KB_RSHIFT	// å³ã‚·ãƒ•ãƒˆ
+			, KB_LCONTROL	// å·¦ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«
+			, KB_RCONTROL	// å³ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«
+			, KB_ESCAPE	// ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—
+			, KB_SPACE	    // ã‚¹ãƒšãƒ¼ã‚¹
+			, KB_PGUP		// ï¼°ï½ï½‡ï½…ï¼µï¼°
+			, KB_PGDN		// ï¼°ï½ï½‡ï½…ï¼¤ï½ï½—ï½Ž
+			, KB_END		// ã‚¨ãƒ³ãƒ‰
+			, KB_HOME		// ãƒ›ãƒ¼ãƒ 
+			, KB_LEFT		// å·¦
+			, KB_UP		// ä¸Š
+			, KB_RIGHT	    // å³
+			, KB_DOWN		// ä¸‹
+			, KB_INSERT	// ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
+			, KB_DELETE	// ãƒ‡ãƒªãƒ¼ãƒˆ
 
-			, KB_MINUS		    // |
-			, KB_YEN			// 
-			, KB_PREVTRACK	    // O
-			, KB_PERIOD		// D
-			, KB_SLASH		    // ^
-			, KB_LALT			// ¶‚`‚k‚s
-			, KB_RALT			// ‰E‚`‚k‚s
+			, KB_MINUS		    // ï¼
+			, KB_YEN			// ï¿¥
+			, KB_PREVTRACK	    // ï¼¾
+			, KB_PERIOD		// ï¼Ž
+			, KB_SLASH		    // ï¼
+			, KB_LALT			// å·¦ï¼¡ï¼¬ï¼´
+			, KB_RALT			// å³ï¼¡ï¼¬ï¼´
 			, KB_SCROLL		// ScrollLock
-			, KB_SEMICOLON	    // G
-			, KB_COLON		    // F
-			, KB_LBRACKET		// m
-			, KB_RBRACKET		// n
-			, KB_AT			// —
-			, KB_BACKSLASH	    // _
-			, KB_COMMA		    // C
+			, KB_SEMICOLON	    // ï¼›
+			, KB_COLON		    // ï¼š
+			, KB_LBRACKET		// ï¼»
+			, KB_RBRACKET		// ï¼½
+			, KB_AT			// ï¼ 
+			, KB_BACKSLASH	    // ï¼¼
+			, KB_COMMA		    // ï¼Œ
 			, KB_CAPSLOCK		// CaspLock
 			, KB_PAUSE		    // PauseBreak
 
-			, KB_NUMPAD0	// ƒeƒ“ƒL[‚O
-			, KB_NUMPAD1	// ƒeƒ“ƒL[‚P
-			, KB_NUMPAD2	// ƒeƒ“ƒL[‚Q
-			, KB_NUMPAD3	// ƒeƒ“ƒL[‚R
-			, KB_NUMPAD4	// ƒeƒ“ƒL[‚S
-			, KB_NUMPAD5	// ƒeƒ“ƒL[‚T
-			, KB_NUMPAD6	// ƒeƒ“ƒL[‚U
-			, KB_NUMPAD7	// ƒeƒ“ƒL[‚V
-			, KB_NUMPAD8	// ƒeƒ“ƒL[‚W
-			, KB_NUMPAD9	// ƒeƒ“ƒL[‚X
-			, KB_MULTIPLY	// ƒeƒ“ƒL[–
-			, KB_ADD		// ƒeƒ“ƒL[{
-			, KB_SUBTRACT	// ƒeƒ“ƒL[|
-			, KB_DECIMAL	// ƒeƒ“ƒL[D
-			, KB_DIVIDE	// ƒeƒ“ƒL[^
-			, KB_NUMPADENTER	// ƒeƒ“ƒL[‚ÌƒGƒ“ƒ^[
+			, KB_NUMPAD0	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼
+			, KB_NUMPAD1	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼‘
+			, KB_NUMPAD2	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼’
+			, KB_NUMPAD3	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼“
+			, KB_NUMPAD4	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼”
+			, KB_NUMPAD5	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼•
+			, KB_NUMPAD6	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼–
+			, KB_NUMPAD7	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼—
+			, KB_NUMPAD8	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼˜
+			, KB_NUMPAD9	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼™
+			, KB_MULTIPLY	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼Š
+			, KB_ADD		// ãƒ†ãƒ³ã‚­ãƒ¼ï¼‹
+			, KB_SUBTRACT	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼
+			, KB_DECIMAL	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼Ž
+			, KB_DIVIDE	// ãƒ†ãƒ³ã‚­ãƒ¼ï¼
+			, KB_NUMPADENTER	// ãƒ†ãƒ³ã‚­ãƒ¼ã®ã‚¨ãƒ³ã‚¿ãƒ¼
 
-			, KB_F1	// ‚e‚P
-			, KB_F2	// ‚e‚Q
-			, KB_F3	// ‚e‚R
-			, KB_F4	// ‚e‚S
-			, KB_F5	// ‚e‚T
-			, KB_F6	// ‚e‚U
-			, KB_F7	// ‚e‚V
-			, KB_F8	// ‚e‚W
-			, KB_F9	// ‚e‚X
-			, KB_F10	// ‚e‚P‚O
-			, KB_F11	// ‚e‚P‚P
-			, KB_F12	// ‚e‚P‚Q
+			, KB_F1	// ï¼¦ï¼‘
+			, KB_F2	// ï¼¦ï¼’
+			, KB_F3	// ï¼¦ï¼“
+			, KB_F4	// ï¼¦ï¼”
+			, KB_F5	// ï¼¦ï¼•
+			, KB_F6	// ï¼¦ï¼–
+			, KB_F7	// ï¼¦ï¼—
+			, KB_F8	// ï¼¦ï¼˜
+			, KB_F9	// ï¼¦ï¼™
+			, KB_F10	// ï¼¦ï¼‘ï¼
+			, KB_F11	// ï¼¦ï¼‘ï¼‘
+			, KB_F12	// ï¼¦ï¼‘ï¼’
 
-			, KB_A	// ‚`
-			, KB_B	// ‚a
-			, KB_C	// ‚b
-			, KB_D	// ‚c
-			, KB_E	// ‚d
-			, KB_F	// ‚e
-			, KB_G	// ‚f
-			, KB_H	// ‚g
-			, KB_I	// ‚h
-			, KB_J	// ‚i
-			, KB_K	// ‚j
-			, KB_L	// ‚k
-			, KB_M	// ‚l
-			, KB_N	// ‚m
-			, KB_O	// ‚n
-			, KB_P	// ‚o
-			, KB_Q	// ‚p
-			, KB_R	// ‚q
-			, KB_S	// ‚r
-			, KB_T	// ‚s
-			, KB_U	// ‚t
-			, KB_V	// ‚u
-			, KB_W	// ‚v
-			, KB_X	// ‚w
-			, KB_Y	// ‚x
-			, KB_Z	// ‚y
-			, KB_0	// ‚O
-			, KB_1	// ‚P
-			, KB_2	// ‚Q
-			, KB_3	// ‚R
-			, KB_4	// ‚S
-			, KB_5	// ‚T
-			, KB_6	// ‚U
-			, KB_7	// ‚V
-			, KB_8	// ‚W
-			, KB_9	// ‚X
+			, KB_A	// ï¼¡
+			, KB_B	// ï¼¢
+			, KB_C	// ï¼£
+			, KB_D	// ï¼¤
+			, KB_E	// ï¼¥
+			, KB_F	// ï¼¦
+			, KB_G	// ï¼§
+			, KB_H	// ï¼¨
+			, KB_I	// ï¼©
+			, KB_J	// ï¼ª
+			, KB_K	// ï¼«
+			, KB_L	// ï¼¬
+			, KB_M	// ï¼­
+			, KB_N	// ï¼®
+			, KB_O	// ï¼¯
+			, KB_P	// ï¼°
+			, KB_Q	// ï¼±
+			, KB_R	// ï¼²
+			, KB_S	// ï¼³
+			, KB_T	// ï¼´
+			, KB_U	// ï¼µ
+			, KB_V	// ï¼¶
+			, KB_W	// ï¼·
+			, KB_X	// ï¼¸
+			, KB_Y	// ï¼¹
+			, KB_Z	// ï¼º
+			, KB_0	// ï¼
+			, KB_1	// ï¼‘
+			, KB_2	// ï¼’
+			, KB_3	// ï¼“
+			, KB_4	// ï¼”
+			, KB_5	// ï¼•
+			, KB_6	// ï¼–
+			, KB_7	// ï¼—
+			, KB_8	// ï¼˜
+			, KB_9	// ï¼™
 			, KB_MAX
 		};
 
-		// ƒWƒ‡ƒCƒpƒbƒh‘Î‰žƒL[ ˆê——
-		// ¦ ƒpƒbƒh‚ÌŽí—Þ‚Å‘Î‰žƒL[”Ô†‚ªˆÙ‚È‚éê‡‚à‚ ‚é‚ç‚µ‚¢
+		// ã‚¸ãƒ§ã‚¤ãƒ‘ãƒƒãƒ‰å¯¾å¿œã‚­ãƒ¼ ä¸€è¦§
+		// â€» ãƒ‘ãƒƒãƒ‰ã®ç¨®é¡žã§å¯¾å¿œã‚­ãƒ¼ç•ªå·ãŒç•°ãªã‚‹å ´åˆã‚‚ã‚ã‚‹ã‚‰ã—ã„
 		enum class ePad {
-			KEY_0		// ‘½‚­‚Ìê‡  
-			, KEY_1		// ‘½‚­‚Ìê‡ ~
-			, KEY_2		// ‘½‚­‚Ìê‡ Z
-			, KEY_3		// ‘½‚­‚Ìê‡ ¢
-			, KEY_4		// ‘½‚­‚Ìê‡ L1
-			, KEY_5		// ‘½‚­‚Ìê‡ R1
-			, KEY_6		// ‘½‚­‚Ìê‡ L2
-			, KEY_7		// ‘½‚­‚Ìê‡ R2
-			, KEY_8		// ‘½‚­‚Ìê‡ SHARE
-			, KEY_9		// ‘½‚­‚Ìê‡ OPTION
-			, KEY_10	// ‘½‚­‚Ìê‡ LStickDown
-			, KEY_11	// ‘½‚­‚Ìê‡ RStickDown
-			, KEY_12	// ‘½‚­‚Ìê‡ HOME
-			, KEY_UP	// \ŽšƒL[ ã
-			, KEY_RIGHT	// \ŽšƒL[ ‰E
-			, KEY_DOWN	// \ŽšƒL[ ‰º
-			, KEY_LEFT	// \ŽšƒL[ ¶
+			KEY_0		// å¤šãã®å ´åˆ â–¡
+			, KEY_1		// å¤šãã®å ´åˆ Ã—
+			, KEY_2		// å¤šãã®å ´åˆ ã€‡
+			, KEY_3		// å¤šãã®å ´åˆ â–³
+			, KEY_4		// å¤šãã®å ´åˆ L1
+			, KEY_5		// å¤šãã®å ´åˆ R1
+			, KEY_6		// å¤šãã®å ´åˆ L2
+			, KEY_7		// å¤šãã®å ´åˆ R2
+			, KEY_8		// å¤šãã®å ´åˆ SHARE
+			, KEY_9		// å¤šãã®å ´åˆ OPTION
+			, KEY_10	// å¤šãã®å ´åˆ LStickDown
+			, KEY_11	// å¤šãã®å ´åˆ RStickDown
+			, KEY_12	// å¤šãã®å ´åˆ HOME
+			, KEY_UP	// åå­—ã‚­ãƒ¼ ä¸Š
+			, KEY_RIGHT	// åå­—ã‚­ãƒ¼ å³
+			, KEY_DOWN	// åå­—ã‚­ãƒ¼ ä¸‹
+			, KEY_LEFT	// åå­—ã‚­ãƒ¼ å·¦
 			, KEY_MAX
 		};
 		enum class eJoyStick {
@@ -173,18 +173,18 @@ namespace tnl {
 		};
 
 
-		// ‰Šú‰»
+		// åˆæœŸåŒ–
 		static void Initialize(HINSTANCE hinstance, HWND hwnd, HDC hdc, uint32_t window_w, uint32_t window_h);
-		// XV
+		// æ›´æ–°
 		static void Update();
-		// ‰ð•ú
+		// è§£æ”¾
 		static void Release();
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒL[ƒ{[ƒh‰Ÿ‰ºŒŸo
+		// ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰æŠ¼ä¸‹æ¤œå‡º
 		// arg.... eKey::KB_***
-		// ret.... [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚é : true ] [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚È‚¢ : false ]
-		// tips... •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// ret.... [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ã‚‹ : true ] [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ãªã„ : false ]
+		// tips... è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tKeys>
 		static bool IsKeyDown(tKeys... iParams)
@@ -197,11 +197,11 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒL[ƒ{[ƒh‰Ÿ‰ºŽž‚ÉƒR[ƒ‹ƒoƒbƒNŠÖ”‚ðŽÀs
-		// arg1... ƒR[ƒ‹ƒoƒbƒNŠÖ”
+		// ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰æŠ¼ä¸‹æ™‚ã«ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã‚’å®Ÿè¡Œ
+		// arg1... ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 		// arg2... eKey::KB_***
-		// tips1.. arg1 ‚ÌƒR[ƒ‹ƒoƒbƒNŠÖ”‚Ìˆø”‚Í arg2 ‚Ìˆø”‚ÌƒCƒ“ƒfƒbƒNƒX‚ª“n‚³‚ê‚é
-		// tips2.. •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// tips1.. arg1 ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã®å¼•æ•°ã¯ arg2 ã®å¼•æ•°ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒæ¸¡ã•ã‚Œã‚‹
+		// tips2.. è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tKeys>
 		static void RunIndexKeyDown(const std::function<void(uint32_t index)>& func, tKeys... iParams)
@@ -215,10 +215,10 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒL[ƒ{[ƒh‰Ÿ‰ºƒgƒŠƒK[ŒŸo
+		// ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰æŠ¼ä¸‹ãƒˆãƒªã‚¬ãƒ¼æ¤œå‡º
 		// arg.... eKey::KB_***
-		// ret.... [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚é : true ] [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚È‚¢ : false ]
-		// tips... •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// ret.... [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ã‚‹ : true ] [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ãªã„ : false ]
+		// tips... è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tKeys>
 		static bool IsKeyDownTrigger(tKeys... iParams)
@@ -231,11 +231,11 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒL[ƒ{[ƒh‰Ÿ‰ºƒgƒŠƒK[Žž‚ÉƒR[ƒ‹ƒoƒbƒNŠÖ”‚ðŽÀs
-		// arg1... ƒR[ƒ‹ƒoƒbƒNŠÖ”
+		// ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰æŠ¼ä¸‹ãƒˆãƒªã‚¬ãƒ¼æ™‚ã«ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã‚’å®Ÿè¡Œ
+		// arg1... ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 		// arg2... eKey::KB_***
-		// tips1.. arg1 ‚ÌƒR[ƒ‹ƒoƒbƒNŠÖ”‚Ìˆø”‚Í arg2 ‚Ìˆø”‚ÌƒCƒ“ƒfƒbƒNƒX‚ª“n‚³‚ê‚é
-		// tips2.. •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// tips1.. arg1 ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã®å¼•æ•°ã¯ arg2 ã®å¼•æ•°ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒæ¸¡ã•ã‚Œã‚‹
+		// tips2.. è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tKeys>
 		static void RunIndexKeyDownTrigger(const std::function<void(uint32_t index)>& func, tKeys... iParams)
@@ -249,10 +249,10 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ‰Ÿ‰º‚³‚ê‚Ä‚¢‚½ƒL[ƒ{[ƒh‚ð—£‚µ‚½Žž‚ÌƒgƒŠƒK[ŒŸo
+		// æŠ¼ä¸‹ã•ã‚Œã¦ã„ãŸã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚’é›¢ã—ãŸæ™‚ã®ãƒˆãƒªã‚¬ãƒ¼æ¤œå‡º
 		// arg.... eKey::KB_***
-		// ret.... [ —£‚µ‚½uŠÔ : true ] [ ‚»‚êˆÈŠO : false ]
-		// tips... •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// ret.... [ é›¢ã—ãŸçž¬é–“ : true ] [ ãã‚Œä»¥å¤– : false ]
+		// tips... è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tKeys>
 		static bool IsKeyReleaseTrigger(tKeys... iParams)
@@ -265,11 +265,11 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ‰Ÿ‰º‚³‚ê‚Ä‚¢‚½ƒL[ƒ{[ƒh‚ð—£‚µ‚½Žž‚ÌƒgƒŠƒK[Žž‚ÉƒR[ƒ‹ƒoƒbƒNŠÖ”‚ðŽÀs
-		// arg1... ƒR[ƒ‹ƒoƒbƒNŠÖ”
+		// æŠ¼ä¸‹ã•ã‚Œã¦ã„ãŸã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‚’é›¢ã—ãŸæ™‚ã®ãƒˆãƒªã‚¬ãƒ¼æ™‚ã«ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã‚’å®Ÿè¡Œ
+		// arg1... ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 		// arg2... eKey::KB_***
-		// tips1.. arg1 ‚ÌƒR[ƒ‹ƒoƒbƒNŠÖ”‚Ìˆø”‚Í arg2 ‚Ìˆø”‚ÌƒCƒ“ƒfƒbƒNƒX‚ª“n‚³‚ê‚é
-		// tips2.. •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// tips1.. arg1 ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã®å¼•æ•°ã¯ arg2 ã®å¼•æ•°ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒæ¸¡ã•ã‚Œã‚‹
+		// tips2.. è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tKeys>
 		static void RunIndexKeyReleaseTrigger(const std::function<void(uint32_t index)>& func, tKeys... iParams)
@@ -283,10 +283,10 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒQ[ƒ€ƒpƒbƒh‰Ÿ‰ºŒŸo
+		// ã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰æŠ¼ä¸‹æ¤œå‡º
 		// arg.... ePad::KEY_***
-		// ret.... [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚é : true ] [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚È‚¢ : false ]
-		// tips... •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// ret.... [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ã‚‹ : true ] [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ãªã„ : false ]
+		// tips... è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tPads>
 		static bool IsPadDown(tPads... iParams)
@@ -308,11 +308,11 @@ namespace tnl {
 			return false;
 		}
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒQ[ƒ€ƒpƒbƒh‰Ÿ‰ºŽž‚ÉƒR[ƒ‹ƒoƒbƒNŠÖ”‚ðŽÀs
-		// arg1... ƒR[ƒ‹ƒoƒbƒNŠÖ”
+		// ã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰æŠ¼ä¸‹æ™‚ã«ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã‚’å®Ÿè¡Œ
+		// arg1... ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 		// arg2... ePad::KEY_***
-		// tips1.. arg1 ‚ÌƒR[ƒ‹ƒoƒbƒNŠÖ”‚Ìˆø”‚Í arg2 ‚Ìˆø”‚ÌƒCƒ“ƒfƒbƒNƒX‚ª“n‚³‚ê‚é
-		// tips2.. •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// tips1.. arg1 ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã®å¼•æ•°ã¯ arg2 ã®å¼•æ•°ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒæ¸¡ã•ã‚Œã‚‹
+		// tips2.. è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tPads>
 		static void RunIndexPadDown(const std::function<void(uint32_t index)>& func, tPads... iParams)
@@ -340,10 +340,10 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒQ[ƒ€ƒpƒbƒh‰Ÿ‰ºƒgƒŠƒK[ŒŸo
+		// ã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰æŠ¼ä¸‹ãƒˆãƒªã‚¬ãƒ¼æ¤œå‡º
 		// arg.... ePad::KEY_***
-		// ret.... [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚é : true ] [ ‰Ÿ‰º‚³‚ê‚Ä‚¢‚È‚¢ : false ]
-		// tips... •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// ret.... [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ã‚‹ : true ] [ æŠ¼ä¸‹ã•ã‚Œã¦ã„ãªã„ : false ]
+		// tips... è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tPads>
 		static bool IsPadDownTrigger(tPads... iParams)
@@ -355,11 +355,11 @@ namespace tnl {
 			return false;
 		}
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒQ[ƒ€ƒpƒbƒh‰Ÿ‰ºƒgƒŠƒK[Žž‚ÉƒR[ƒ‹ƒoƒbƒNŠÖ”‚ðŽÀs
-		// arg1... ƒR[ƒ‹ƒoƒbƒNŠÖ”
+		// ã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰æŠ¼ä¸‹ãƒˆãƒªã‚¬ãƒ¼æ™‚ã«ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã‚’å®Ÿè¡Œ
+		// arg1... ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 		// arg2... ePad::KEY_***
-		// tips1.. arg1 ‚ÌƒR[ƒ‹ƒoƒbƒNŠÖ”‚Ìˆø”‚Í arg2 ‚Ìˆø”‚ÌƒCƒ“ƒfƒbƒNƒX‚ª“n‚³‚ê‚é
-		// tips2.. •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// tips1.. arg1 ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã®å¼•æ•°ã¯ arg2 ã®å¼•æ•°ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒæ¸¡ã•ã‚Œã‚‹
+		// tips2.. è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tPads>
 		static void RunIndexPadDownTrigger(const std::function<void(uint32_t index)>& func, tPads... iParams)
@@ -372,10 +372,10 @@ namespace tnl {
 			}
 		}
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ‰Ÿ‰º‚³‚ê‚Ä‚¢‚½ƒQ[ƒ€ƒpƒbƒh‚ð—£‚µ‚½Žž‚ÌƒgƒŠƒK[ŒŸo
+		// æŠ¼ä¸‹ã•ã‚Œã¦ã„ãŸã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰ã‚’é›¢ã—ãŸæ™‚ã®ãƒˆãƒªã‚¬ãƒ¼æ¤œå‡º
 		// arg.... ePad::KEY_***
-		// ret.... [ —£‚µ‚½uŠÔ : true ] [ ‚»‚êˆÈŠO : false ]
-		// tips... •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// ret.... [ é›¢ã—ãŸçž¬é–“ : true ] [ ãã‚Œä»¥å¤– : false ]
+		// tips... è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tPads>
 		static bool IsPadReleaseTrigger(tPads... iParams)
@@ -387,11 +387,11 @@ namespace tnl {
 			return false;
 		}
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ‰Ÿ‰º‚³‚ê‚Ä‚¢‚½ƒQ[ƒ€ƒpƒbƒh‚ð—£‚µ‚½Žž‚ÌƒgƒŠƒK[Žž‚ÉƒR[ƒ‹ƒoƒbƒNŠÖ”‚ðŽÀs
-		// arg1... ƒR[ƒ‹ƒoƒbƒNŠÖ”
+		// æŠ¼ä¸‹ã•ã‚Œã¦ã„ãŸã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰ã‚’é›¢ã—ãŸæ™‚ã®ãƒˆãƒªã‚¬ãƒ¼æ™‚ã«ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã‚’å®Ÿè¡Œ
+		// arg1... ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 		// arg2... ePad::KEY_***
-		// tips1.. arg1 ‚ÌƒR[ƒ‹ƒoƒbƒNŠÖ”‚Ìˆø”‚Í arg2 ‚Ìˆø”‚ÌƒCƒ“ƒfƒbƒNƒX‚ª“n‚³‚ê‚é
-		// tips2.. •¡”ŒÂ‚Ìˆø”‚É‘Î‰ž
+		// tips1.. arg1 ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°ã®å¼•æ•°ã¯ arg2 ã®å¼•æ•°ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒæ¸¡ã•ã‚Œã‚‹
+		// tips2.. è¤‡æ•°å€‹ã®å¼•æ•°ã«å¯¾å¿œ
 		//------------------------------------------------------------------------------------------------------------------------------
 		template<typename... tPads>
 		static void RunIndexPadReleaseTrigger(const std::function<void(uint32_t index)>& func, tPads... iParams)
@@ -405,15 +405,15 @@ namespace tnl {
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒQ[ƒ€ƒpƒbƒh‚Ì L2 R2 “ü—Í’lŽæ“¾
-		// ret... 0.0f ` 1.0f
+		// ã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰ã® L2 R2 å…¥åŠ›å€¤å–å¾—
+		// ret... 0.0f ï½ž 1.0f
 		//------------------------------------------------------------------------------------------------------------------------------
 		static float GetPadL2();
 		static float GetPadR2();
 
 		//------------------------------------------------------------------------------------------------------------------------------
-		// ƒQ[ƒ€ƒpƒbƒh‚Ì ¶‰EƒXƒeƒBƒbƒN“ü—Í’lŽæ“¾
-		// ret... ŠeŽ²‚É‘Î‚µ‚Ä -1.0f ` 1.0f
+		// ã‚²ãƒ¼ãƒ ãƒ‘ãƒƒãƒ‰ã® å·¦å³ã‚¹ãƒ†ã‚£ãƒƒã‚¯å…¥åŠ›å€¤å–å¾—
+		// ret... å„è»¸ã«å¯¾ã—ã¦ -1.0f ï½ž 1.0f
 		//------------------------------------------------------------------------------------------------------------------------------
 		static tnl::Vector3 GetLeftStick();
 		static tnl::Vector3 GetRightStick();
@@ -428,11 +428,11 @@ namespace tnl {
 		// arg... tnl::Input::eMouseTrigger::OUT_RIGHT
 		static bool IsMouseTrigger(eMouseTrigger _mouse);
 
-		// ƒ}ƒEƒXÀ•W‚ÌŽæ“¾
+		// ãƒžã‚¦ã‚¹åº§æ¨™ã®å–å¾—
 		static tnl::Vector3 GetMousePosition();
-		// ƒ}ƒEƒXƒzƒC[ƒ‹‚Ì•Ï‰»—Ê‚ðŽæ“¾
+		// ãƒžã‚¦ã‚¹ãƒ›ã‚¤ãƒ¼ãƒ«ã®å¤‰åŒ–é‡ã‚’å–å¾—
 		static int32_t GetMouseWheel();
-		// ƒ}ƒEƒX‚ð“®‚©‚µ‚½Žž‚Ì•Ï‰»—Ê
+		// ãƒžã‚¦ã‚¹ã‚’å‹•ã‹ã—ãŸæ™‚ã®å¤‰åŒ–é‡
 		static tnl::Vector3 GetMouseVelocity();
 
 	private:

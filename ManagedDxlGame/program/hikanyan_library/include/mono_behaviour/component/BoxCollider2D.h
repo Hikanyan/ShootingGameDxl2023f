@@ -36,15 +36,4 @@ public:
     virtual void OnCollisionEnter2D(BoxCollider2D* other)
     {
     };
-
-
-    GameObject* get_owner() const override
-    {
-        return owner_;
-    }
-
-    void set_owner(GameObject* owning_object) override
-    {
-        owner_ = owning_object;
-    }
 };

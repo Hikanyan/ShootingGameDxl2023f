@@ -19,4 +19,6 @@ public:
 
 private:
     std::shared_ptr<GameObject> title_text_ui_object = std::make_shared<GameObject>();
+    std::shared_ptr<GameObject> input_enter_object = std::make_shared<GameObject>();
+    
 };
