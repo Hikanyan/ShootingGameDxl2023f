@@ -7,5 +7,4 @@ public:
     virtual ~InputManager() override = default;
     
     void update(float delta_time) override;
-    void fixed_update(float delta_time) override;
 };
