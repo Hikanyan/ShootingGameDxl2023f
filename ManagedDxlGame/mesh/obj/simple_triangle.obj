@@ -1,0 +1,23 @@
+# Created by Metasequoia
+
+mtllib simple_triangle.mtl
+
+v 0.000000 100.000000 0.000000
+v 100.000000 0.000000 0.000000
+v -100.000000 0.000000 0.000000
+# 3 vertices
+
+vt 0.50000 0.00000
+vt 1.00000 1.00000
+vt 0.00000 1.00000
+# 4 texture vertices
+
+vn 0.00000 0.00000 -1.00000
+vn 0.00000 0.00000 -1.00000
+vn 0.00000 0.00000 -1.00000
+# 3 normal vertices
+
+usemtl mat1
+f 1/1/1 2/2/2 3/3/3
+# 1 elements
+
